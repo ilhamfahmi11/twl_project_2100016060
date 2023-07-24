@@ -19,7 +19,7 @@ const Penduduk = () => {
   const fetchPenduduk = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('https://twl-project-2100016060.vercel.app/data/penduduk', {
+      const response = await axios.get('https://finalproject-api-chi.vercel.app/data/penduduk', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -33,7 +33,7 @@ const Penduduk = () => {
   const createPenduduk = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://twl-project-2100016060.vercel.app/data/penduduk', formData, {
+      const response = await axios.post('https://finalproject-api-chi.vercel.app/data/penduduk', formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -59,7 +59,7 @@ const Penduduk = () => {
 
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `https://twl-project-2100016060.vercel.app/data/penduduk/${selectedPenduduk._id}`,
+        `https://finalproject-api-chi.vercel.app/data/penduduk/${selectedPenduduk._id}`,
         formData,
         {
           headers: {
@@ -87,7 +87,7 @@ const Penduduk = () => {
   const deletePenduduk = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.delete(`https://twl-project-2100016060.vercel.app/data/penduduk/${id}`, {
+      const response = await axios.delete(`https://finalproject-api-chi.vercel.app/data/penduduk/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
